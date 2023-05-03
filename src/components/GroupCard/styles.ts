@@ -4,10 +4,10 @@ import { UsersThree } from "phosphor-react-native";
 
 export const Container = styled(TouchableOpacity)`
   widht: 100%;
-  height: 90px;
   background-color: ${({ theme }) => theme.COLORS.GRAY_500};
   border-radius: 6px;
   flex-direction: row;
+  align-itens: center;
   padding: 24px;
   margin-bottom: 12px;
 `;
