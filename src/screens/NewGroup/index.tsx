@@ -25,6 +25,7 @@ export function NewGroup() {
 
       await groupCreate(group.trim());
       navigation.navigate("players", { group });
+      setGroup("");
     } catch (error) {
       if (error instanceof AppError) {
         Alert.alert("Novo Grupo", error.message);
@@ -45,7 +46,11 @@ export function NewGroup() {
           title="Nova turma"
           subtitle="Crie a turma para adicionar as pessoas"
         />
-        <Input placeholder="Nome da turma" onChangeText={setGroup} />
+        <Input
+          value={group}
+          placeholder="Nome da turma"
+          onChangeText={setGroup}
+        />
         <Button title="Criar" style={{ marginTop: 20 }} onPress={handleNew} />
       </Content>
     </Container>
